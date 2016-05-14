@@ -1,7 +1,7 @@
 require_relative 'robot'
 require_relative 'command_parser'
 
-# a FileRunner is to run commands from a file, in the file each
+# a FileRunner is to run commands read from a file. In the file each
 # line is a command, if a line starts with '#' it's deemed as a comment
 # and will be ignored, and also empty lines will be ignored
 class FileRunner

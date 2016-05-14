@@ -1,4 +1,4 @@
-# This test is to test it will prevent fall off the table 
+# This test is to test it will prevent the robot to fall off the table 
 # Expected output:
 # 3,0,SOUTH
 

@@ -1,6 +1,8 @@
 require_relative 'robot'
 require_relative 'command_parser'
 
+# ConsoleRunner reads commands from standard input, it will give error messages
+# when an invalid command is entered. And to quit the runner, type 'QUIT'
 class ConsoleRunner
 
   attr_accessor :robot, :command_parser
@@ -11,7 +13,8 @@ class ConsoleRunner
   end
 
   def run
-    puts "Type a command to run it, type QUIT to exit."
+    puts "Type a command to run it, or type QUIT to exit."
+
     while (line = $stdin.readline.chomp) && !quit_command?(line)
       begin 
         command_parser.parse(line).execute(robot)

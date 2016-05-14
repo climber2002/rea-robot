@@ -1,7 +1,7 @@
 require 'spec_helper'
-require_relative '../lib/robot'
 require_relative '../lib/command_parser'
 require_relative '../lib/facing'
+require_relative '../lib/command'
 
 describe CommandParser do 
 
@@ -10,10 +10,10 @@ describe CommandParser do
   describe 'parse REPLACE command' do 
 
     it 'should parse succssfully for a valid PLACE command' do 
-      place_command = subject.parse("PLACE 2,3,WEST")
-      expect(place_command.x).to eq 2
-      expect(place_command.y).to eq 3
-      expect(place_command.facing).to eq Facing::West.instance
+      command = subject.parse("PLACE 2,3,WEST")
+      expect(command.x).to eq 2
+      expect(command.y).to eq 3
+      expect(command.facing).to eq Facing::West.instance
     end
 
     it 'should raise error if the facing is missing' do 
@@ -27,17 +27,38 @@ describe CommandParser do
 
   describe 'parse MOVE command' do
     it 'should parse succssfully for a valid MOVE command' do 
-      move_command = subject.parse("MOVE")
-      expect(move_command).to be_a(Command::Move)
+      command = subject.parse("MOVE")
+      expect(command).to be_a(Command::Move)
     end
 
     it 'should parse succssfully when there are trailing spaces' do 
-      move_command = subject.parse("MOVE   ")
-      expect(move_command).to be_a(Command::Move)
+      command = subject.parse("MOVE   ")
+      expect(command).to be_a(Command::Move)
     end
 
     it 'should raise error when there are arguments' do 
       expect { subject.parse("MOVE 2") }.to raise_error(ArgumentError)
+    end
+  end
+
+  describe 'parse REPORT command' do 
+    it 'should parse succssfully for a valid REPORT command' do 
+      command = subject.parse("REPORT")
+      expect(command).to be_a(Command::Report)
+    end
+  end
+
+  describe 'parse LEFT command' do 
+    it 'should parse succssfully for a valid LEFT command' do 
+      command = subject.parse("LEFT")
+      expect(command).to be_a(Command::Left)
+    end
+  end
+
+  describe 'parse RIGHT command' do 
+    it 'should parse succssfully for a valid RIGHT command' do 
+      command = subject.parse("RIGHT")
+      expect(command).to be_a(Command::Right)
     end
   end
 end

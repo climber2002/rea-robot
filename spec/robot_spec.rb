@@ -120,4 +120,21 @@ describe Robot do
       end
     end
   end
+
+  describe '#to_s' do 
+    context 'when the robot is off the table' do 
+
+      before { expect(subject.on_the_table?).to eq false }
+
+      it { expect(subject.to_s).to eq 'Not on the table' }
+    end
+
+    context 'when the robot is on the table' do 
+      before do
+        subject.place(2, 0, Facing::South.instance)
+      end
+
+      it { expect(subject.to_s).to eq '2,0,SOUTH' }
+    end
+  end
 end

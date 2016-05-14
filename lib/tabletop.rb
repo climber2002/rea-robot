@@ -1,4 +1,4 @@
-# A Tabletop instance is a square tabletop with two dimensions.
+# A Tabletop is a square tabletop with two dimensions.
 # The origin (0,0) can be considered to be the SOUTH WEST most corner.
 class Tabletop
 
@@ -14,7 +14,7 @@ class Tabletop
     x >= 0 && x < x_dimension && y >= 0 && y < y_dimension
   end
 
-  # Returns true if the Position(x, y) falls off the tabletop
+  # Returns true if the Position(x, y) falls off the tabletop, it's opposite of falls_within?
   def falls_off?(x, y)
     !falls_within?(x, y)
   end

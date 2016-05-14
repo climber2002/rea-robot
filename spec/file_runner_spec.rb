@@ -7,7 +7,7 @@ describe FileRunner do
   # This map contains all test data, the key is the filename in test-data without .txt extension, 
   # and the value is the expected output to $stdout
   let(:test_data) {
-    { ignore_until_place: '3,3,NORTH', invalid_place: '', multiple_place: '1,2,WEST',
+    { ignore_until_place: '3,3,NORTH', offbounds_place: '', multiple_place: '1,2,WEST',
       normal: '3,3,NORTH', prevent_falloff: '3,0,SOUTH' }
   }
 
