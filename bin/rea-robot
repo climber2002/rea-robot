@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/file_runner'
+require_relative '../lib/console_runner'
+
+if ARGV.empty?
+  ConsoleRunner.new.run
+else
+  FileRunner.new(ARGV.first).run
+end

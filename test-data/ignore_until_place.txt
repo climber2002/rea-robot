@@ -1,0 +1,14 @@
+# This file is to test it will ignore other commands until a valid PLACE command is issued
+# Expected output:
+# 3,3,NORTH
+
+MOVE
+LEFT
+RIGHT
+REPORT
+PLACE 1,2,EAST
+MOVE
+MOVE
+LEFT
+MOVE
+REPORT

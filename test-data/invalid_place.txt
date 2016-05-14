@@ -1,0 +1,7 @@
+# This test is to test it will ignore PLACE if the position is off bounds
+# Expected output:
+# (Empty)
+
+PLACE 0,5,EAST
+MOVE
+REPORT

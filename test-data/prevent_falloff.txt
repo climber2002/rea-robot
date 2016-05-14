@@ -1,0 +1,11 @@
+# This test is to test it will prevent fall off the table 
+# Expected output:
+# 3,0,SOUTH
+
+PLACE 1,2,EAST
+MOVE
+MOVE
+RIGHT
+MOVE
+MOVE
+REPORT

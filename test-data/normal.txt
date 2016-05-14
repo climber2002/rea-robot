@@ -1,0 +1,10 @@
+# This test is copied from PROBLEM.md
+# Expected output:
+# 3,3,NORTH
+
+PLACE 1,2,EAST
+MOVE
+MOVE
+LEFT
+MOVE
+REPORT

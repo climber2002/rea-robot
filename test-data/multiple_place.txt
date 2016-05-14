@@ -1,0 +1,11 @@
+# Test that it accepts multiple PLACE commands
+# Expected output:
+# 1,2,WEST
+
+PLACE 1,2,EAST
+MOVE
+MOVE
+PLACE 2,2,SOUTH
+RIGHT
+MOVE
+REPORT
