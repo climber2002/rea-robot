@@ -11,8 +11,8 @@ This toy application is a solution to rea-robot and is created by Chi(Andy) Wang
 - spec : Contains the specs
 - test-data : Contains some sample command files
 
-Installation
-------------
+Install dependent rubygems
+--------------------------
 
 Firstly we need to install the dependent rubygems. RSpec is the only dependent gem we need to run the specs. Assuming Ruby and bundler are already installed, we run the following command under the *rea-robot* base directory. (In this document I always assume your current directory is the *rea-robot* base directory)
 
@@ -41,6 +41,9 @@ The argument <filepath> is the path to your commnd file. For example, to read fr
 
     bin/rea-robot test-data/normal.txt
 
+**Note: ** In case it complains *rea-robot* is not executable, run following command to add executable attribute to the file,
+
+    chmod +x bin/rea-robot
 
 ### Read commands from standard input
 
