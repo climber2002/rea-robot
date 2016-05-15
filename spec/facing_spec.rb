@@ -1,5 +1,4 @@
-require 'spec_helper'
-require_relative '../lib/facing'
+require 'facing'
 
 describe Facing do 
 

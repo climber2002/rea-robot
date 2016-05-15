@@ -1,5 +1,4 @@
-require 'spec_helper'
-require_relative '../lib/robot'
+require 'robot'
 
 describe Robot do 
 
@@ -36,6 +35,7 @@ describe Robot do
 
       it 'should ignore the rotate when the robot is not on the table' do 
         expect(subject.rotate_left).to eq false
+        expect(subject.facing).to be_nil
       end
     end
 
@@ -61,6 +61,7 @@ describe Robot do
 
       it 'should ignore the rotate when the robot is not on the table' do 
         expect(subject.rotate_right).to eq false
+        expect(subject.facing).to be_nil
       end
     end
 
@@ -87,6 +88,9 @@ describe Robot do
 
       it 'should ignore the move when the robot is not on the table' do 
         expect(subject.move).to eq false
+        expect(subject.x).to be_nil
+        expect(subject.y).to be_nil
+        expect(subject.facing).to be_nil
       end
     end
 

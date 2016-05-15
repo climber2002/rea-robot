@@ -16,11 +16,7 @@ class ConsoleRunner
     puts "Type a command to run it, or type QUIT to exit."
 
     while (line = $stdin.readline.chomp) && !quit_command?(line)
-      begin 
-        command_parser.parse(line).execute(robot)
-      rescue ArgumentError
-        puts "Invalid command, please try again. Command: #{line}"
-      end
+      run_command(line)
     end
   end
 
@@ -28,5 +24,11 @@ class ConsoleRunner
 
     def quit_command?(line)
       line.upcase == 'QUIT'
+    end
+
+    def run_command(line)
+      command_parser.parse(line.to_s).execute(robot)
+    rescue ArgumentError
+      puts "Invalid command, please try again. Command: #{line}"
     end
 end

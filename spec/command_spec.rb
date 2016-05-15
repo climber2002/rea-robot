@@ -1,8 +1,7 @@
-require 'spec_helper'
-require_relative '../lib/robot'
-require_relative '../lib/command'
+require 'robot'
+require 'command'
 
-# In this command spec currently we only test the Command::Report, as the other commands
+# In this spec currently we only test the Command::Report, as the other commands
 # simply delegate the execution to the Robot instance. And in robot_spec.rb we covered
 # all scenarios
 describe Command do 

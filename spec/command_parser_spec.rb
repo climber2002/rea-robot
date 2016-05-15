@@ -1,7 +1,6 @@
-require 'spec_helper'
-require_relative '../lib/command_parser'
-require_relative '../lib/facing'
-require_relative '../lib/command'
+require 'command_parser'
+require 'facing'
+require 'command'
 
 describe CommandParser do 
 

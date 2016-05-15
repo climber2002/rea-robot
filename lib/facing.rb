@@ -7,7 +7,7 @@ require 'singleton'
 # - rotate_left: Returns the new Facing when the robot rotates left
 # - rotate_right: Returns the new Facing when the robot rotates right
 # - next_move_position: Given a current Position(x, y), returns the next position if the robot makes a move, 
-# this method just returns the next position and not consider if the position will be fall off the table
+# this method doesn't consider if the position will fall off the table or not.
 #
 # As the Facing classes don't maintain their own state, for each Facing class we only need one instance,
 # so all Facing classes are implemented as Singleton to save memory

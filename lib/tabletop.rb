@@ -1,4 +1,4 @@
-# A Tabletop is a square tabletop with two dimensions.
+# A Tabletop is a square table with two dimensions.
 # The origin (0,0) can be considered to be the SOUTH WEST most corner.
 class Tabletop
 

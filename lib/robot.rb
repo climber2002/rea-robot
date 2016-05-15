@@ -1,6 +1,6 @@
 require_relative 'tabletop'
 
-# A Robot is associated with a Tabletop and it maintains its current position and facing.
+# A Robot is associated with a 5x5 Tabletop and it maintains its current position and facing.
 class Robot
 
   attr_accessor :tabletop
@@ -10,10 +10,10 @@ class Robot
     self.tabletop = Tabletop.new(5, 5)
   end
 
-  # Returns true if the robot is already placed on the table, returns false othersise. By default
-  # the Robot is NOT on the table and it is placed on the table when receving a valid PLACE command. 
-  # When not on the table it will ignore other commands such as MOVE, LEFT, RIGHT, REPORT. A robot is only on 
-  # table when the x, y and facing has value
+  # Returns true if the robot is already placed on the table, returns false otherwise. By default
+  # the Robot is NOT on the table and it is only placed on the table when receving a valid PLACE command. 
+  # When not on the table it will ignore other commands such as MOVE, LEFT, RIGHT, REPORT. A robot on the
+  # table means its position and facing have values
   def on_the_table?
     !!(x && y && facing)
   end
